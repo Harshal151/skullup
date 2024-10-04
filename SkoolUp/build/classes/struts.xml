@@ -1,0 +1,1668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.multipart.maxSize" value="30000000" />
+
+	<package name="default" namespace="/*" extends="struts-default">
+		<action name="Login" class="com.kovidRMS.action.LoginAction"
+			method="execute">
+			<result name="success">welcome.jsp</result>
+			<result name="input" type="redirectAction">
+               <param name="actionName">RenderloadLeavingStudent</param>
+            </result>
+            <result name="error">index.jsp</result>
+
+		</action>
+
+		<action name="Logout" class="com.kovidRMS.action.LoginAction"
+			method="logoutUser">
+			<result name="success">index.jsp</result>
+		</action>
+
+		<action name="AddUser" class="com.kovidRMS.action.LoginAction"
+			method="addUser">
+			<result name="success">addUser.jsp</result>
+			<result name="error">addUser.jsp</result>
+			<result name="input">addUser.jsp</result>
+		</action>
+
+		<action name="SearchUser" class="com.kovidRMS.action.LoginAction"
+			method="searchUser">
+			<result name="success">editUserList.jsp</result>
+			<result name="error">editUserList.jsp</result>
+		</action>
+
+		<action name="RenderEditUserList" class="com.kovidRMS.action.LoginAction"
+			method="renderEditUserList">
+			<result name="success">editUserList.jsp</result>
+		</action>
+
+		<action name="RenderEditUser" class="com.kovidRMS.action.LoginAction"
+			method="renderEditUser">
+			<result name="success">editUser.jsp</result>
+		</action>
+
+		<action name="EditUser" class="com.kovidRMS.action.LoginAction"
+			method="editUser">
+			<result name="success">editUser.jsp</result>
+			<result name="error">editUser.jsp</result>
+			<result name="input">editUser.jsp</result>
+		</action>
+
+		<action name="DisableUser" class="com.kovidRMS.action.LoginAction"
+			method="deleteUser">
+			<result name="success">editUserList.jsp</result>
+			<result name="error">editUserList.jsp</result>
+		</action>
+
+		<action name="EnableUser" class="com.kovidRMS.action.LoginAction"
+			method="enableUser">
+			<result name="success">editUserList.jsp</result>
+			<result name="error">editUserList.jsp</result>
+		</action>
+		
+		<action name="EditUserProfile" class="com.kovidRMS.action.LoginAction"
+			method="editUserProfile">
+			<result name="success">userProfile.jsp</result>
+			<result name="error">userProfile.jsp</result>
+			<result name="input">userProfile.jsp</result>
+		</action>
+
+		<action name="RenderEditProfile" class="com.kovidRMS.action.LoginAction"
+			method="renderEditProfile">
+			<result name="success">userProfile.jsp</result>
+			<result name="error">userProfile.jsp</result>
+		</action>
+
+		<action name="SearchOrganizations" class="com.kovidRMS.action.LoginAction"
+			method="searchOrganizations">
+			<result name="success">manageOrganization.jsp</result>
+			<result name="error">manageOrganization.jsp</result>
+		</action>
+
+		<action name="ViewAllOrganizations" class="com.kovidRMS.action.LoginAction"
+			method="viewAllOrganizations">
+			<result name="success">manageOrganization.jsp</result>
+			<result name="error">manageOrganization.jsp</result>
+		</action>
+
+		<action name="RenderEditOrganization" class="com.kovidRMS.action.LoginAction"
+			method="renderEditOrganization">
+			<result name="success">manageOrganization.jsp</result>
+			<result name="error">manageOrganization.jsp</result>
+		</action>
+
+		<action name="AddOrganization" class="com.kovidRMS.action.LoginAction"
+			method="addOrganization">
+			<result name="success">manageOrganization.jsp</result>
+			<result name="error">manageOrganization.jsp</result>
+		</action>
+
+		<action name="EditOrganization" class="com.kovidRMS.action.LoginAction"
+			method="editOrganization">
+			<result name="success">manageOrganization.jsp</result>
+			<result name="error">manageOrganization.jsp</result>
+		</action>
+
+		<action name="RenderAcademicYear" class="com.kovidRMS.action.LoginAction"
+			method="renderAcademicYear">
+			<result name="success">manageAcademicYear.jsp</result>
+			<result name="error">manageAcademicYear.jsp</result>
+		</action>
+
+		<action name="SearchAcademicYear" class="com.kovidRMS.action.LoginAction"
+			method="searchAcademicYear">
+			<result name="success">manageAcademicYear.jsp</result>
+			<result name="error">manageAcademicYear.jsp</result>
+		</action>
+
+		<action name="ViewAllAcademicYear" class="com.kovidRMS.action.LoginAction"
+			method="viewAllAcademicYear">
+			<result name="success">manageAcademicYear.jsp</result>
+			<result name="error">manageAcademicYear.jsp</result>
+		</action>
+
+		<action name="RenderEditAcademicYear" class="com.kovidRMS.action.LoginAction"
+			method="renderEditAcademicYear">
+			<result name="success">manageAcademicYear.jsp</result>
+			<result name="error">manageAcademicYear.jsp</result>
+		</action>
+
+		<action name="ActivateAcademicYear" class="com.kovidRMS.action.LoginAction"
+			method="activateAcademicYear">
+			<result name="success">manageAcademicYear.jsp</result>
+			<result name="error">manageAcademicYear.jsp</result>
+		</action>
+		
+		<action name="AddAcademicYear" class="com.kovidRMS.action.LoginAction"
+			method="addAcademicYear">
+			<result name="success">manageAcademicYear.jsp</result>
+			<result name="error">manageAcademicYear.jsp</result>
+		</action>
+
+		<action name="EditAcademicYear" class="com.kovidRMS.action.LoginAction"
+			method="editAcademicYear">
+			<result name="success">manageAcademicYear.jsp</result>
+			<result name="error">manageAcademicYear.jsp</result>
+		</action>
+
+		<action name="EditAttendance" class="com.kovidRMS.action.LoginAction"
+			method="editAttendance">
+			<result name="success">manageAcademicYear.jsp</result>
+			<result name="error">manageAcademicYear.jsp</result>
+		</action>
+
+		<action name="RenderaddStudent" class="com.kovidRMS.action.StudentAction"
+			method="renderaddStudent">
+			<result name="success">addStudent.jsp</result>
+			<result name="error">addStudent.jsp</result>
+		</action>
+
+		<action name="AddStudent" class="com.kovidRMS.action.StudentAction"
+			method="addStudent">
+			<result name="success">addStudent.jsp</result>
+			<result name="input">addStudent.jsp</result>
+			<result name="error">addStudent.jsp</result>
+		</action>
+
+		<action name="RenderManageEditStudentList" class="com.kovidRMS.action.StudentAction"
+			method="renderManageEditStudentList">
+			<result name="success">editStudentList.jsp</result>
+			<result name="error">editStudentList.jsp</result>
+		</action>
+		
+		<action name="SearchStudent" class="com.kovidRMS.action.StudentAction"
+			method="searchStudent">
+			<result name="success">editStudentList.jsp</result>
+			<result name="error">editStudentList.jsp</result>
+		</action>
+
+		<action name="RenderEditStudentList" class="com.kovidRMS.action.StudentAction"
+			method="renderEditStudentList">
+			<result name="success">editStudentList.jsp</result>
+			<result name="error">editStudentList.jsp</result>
+		</action>
+
+		<action name="RenderEditStudent" class="com.kovidRMS.action.StudentAction"
+			method="renderEditStudent">
+			<result name="success">editStudent.jsp</result>
+		</action>
+
+		<action name="EditStudent" class="com.kovidRMS.action.StudentAction"
+			method="editStudent">
+			<result name="success">editStudent.jsp</result>
+			<result name="error">editStudent.jsp</result>
+			<result name="input">editStudent.jsp</result>
+		</action>
+
+		<action name="DisableStudent" class="com.kovidRMS.action.StudentAction"
+			method="deleteStudent">
+			<result name="success">editStudentList.jsp</result>
+			<result name="error">editStudentList.jsp</result>
+		</action>
+
+		<action name="RendertransferStudent" class="com.kovidRMS.action.StudentAction"
+			method="rendertransferStudent">
+			<result name="success">transferStudent.jsp</result>
+			<result name="error">transferStudent.jsp</result>
+		</action>
+
+		<action name="LoadTransferStudent" class="com.kovidRMS.action.StudentAction"
+			method="loadTransferStudent">
+			<result name="success">transferStudent.jsp</result>
+			<result name="error">transferStudent.jsp</result>
+		</action>
+
+		<action name="TransferStudent" class="com.kovidRMS.action.StudentAction"
+			method="transferStudent">
+			<result name="success">transferStudent.jsp</result>
+			<result name="error">transferStudent.jsp</result>
+		</action>
+
+		<action name="RenderBulkUpdateStudent" class="com.kovidRMS.action.StudentAction"
+			method="renderBulkUpdateStudent">
+			<result name="success">bulkUpdateStudents.jsp</result>
+			<result name="error">bulkUpdateStudents.jsp</result>
+		</action>
+		
+		<action name="BulkUpdateStudentsByAcademicYear" class="com.kovidRMS.action.StudentAction"
+			method="bulkUpdateStudentsByAcademicYear">
+			<result name="success">bulkUpdateStudents.jsp</result>
+			<result name="error">bulkUpdateStudents.jsp</result>
+		</action>
+
+		<action name="LoadBulkStudent" class="com.kovidRMS.action.StudentAction"
+			method="loadBulkStudent">
+			<result name="success">bulkUpdateStudents.jsp</result>
+			<result name="error">bulkUpdateStudents.jsp</result>
+		</action>
+
+		<action name="BulkUpdateStudent" class="com.kovidRMS.action.StudentAction"
+			method="bulkUpdateStudent">
+			<result name="success">bulkUpdateStudents.jsp</result>
+			<result name="error">bulkUpdateStudents.jsp</result>
+		</action>
+
+
+		<action name="SearchSubjects" class="com.kovidRMS.action.StudentAction"
+			method="searchSubjects">
+			<result name="success">manageSubject.jsp</result>
+			<result name="error">manageSubject.jsp</result>
+		</action>
+
+		<action name="ViewAllSubjects" class="com.kovidRMS.action.StudentAction"
+			method="viewAllSubjects">
+			<result name="success">manageSubject.jsp</result>
+			<result name="error">manageSubject.jsp</result>
+		</action>
+
+		<action name="RenderEditSubject" class="com.kovidRMS.action.StudentAction"
+			method="renderEditSubject">
+			<result name="success">manageSubject.jsp</result>
+			<result name="error">manageSubject.jsp</result>
+		</action>
+
+		<action name="AddSubject" class="com.kovidRMS.action.StudentAction"
+			method="addSubject">
+			<result name="success">manageSubject.jsp</result>
+			<result name="error">manageSubject.jsp</result>
+		</action>
+
+		<action name="EditSubject" class="com.kovidRMS.action.StudentAction"
+			method="editSubject">
+			<result name="success">manageSubject.jsp</result>
+			<result name="error">manageSubject.jsp</result>
+		</action>
+
+		<action name="DisableSubject" class="com.kovidRMS.action.StudentAction"
+			method="deleteSubject">
+			<result name="success">manageSubject.jsp</result>
+			<result name="error">manageSubject.jsp</result>
+		</action>
+
+		<action name="RenderManageStandard" class="com.kovidRMS.action.LoginAction"
+			method="renderManageStandard">
+			<result name="success">manageStandard.jsp</result>
+			<result name="error">manageStandard.jsp</result>
+		</action>
+
+		<action name="SearchStandard" class="com.kovidRMS.action.LoginAction"
+			method="searchStandard">
+			<result name="success">manageStandard.jsp</result>
+			<result name="error">manageStandard.jsp</result>
+		</action>
+
+		<action name="ViewAllStandards" class="com.kovidRMS.action.LoginAction"
+			method="viewAllStandards">
+			<result name="success">manageStandard.jsp</result>
+			<result name="error">manageStandard.jsp</result>
+		</action>
+
+		<action name="RenderEditStandard" class="com.kovidRMS.action.LoginAction"
+			method="renderEditStandard">
+			<result name="success">manageStandard.jsp</result>
+			<result name="error">manageStandard.jsp</result>
+		</action>
+
+		<action name="AddStandard" class="com.kovidRMS.action.LoginAction"
+			method="addStandard">
+			<result name="success">manageStandard.jsp</result>
+			<result name="error">manageStandard.jsp</result>
+		</action>
+
+		<action name="EditStandard" class="com.kovidRMS.action.LoginAction"
+			method="editStandard">
+			<result name="success">manageStandard.jsp</result>
+			<result name="error">manageStandard.jsp</result>
+		</action>
+
+		<action name="DisableStandard" class="com.kovidRMS.action.LoginAction"
+			method="deleteStandard">
+			<result name="success">manageStandard.jsp</result>
+			<result name="error">manageStandard.jsp</result>
+		</action>
+
+		<action name="RenderDivision" class="com.kovidRMS.action.LoginAction"
+			method="renderDivision">
+			<result name="success">manageDivision.jsp</result>
+			<result name="error">manageDivision.jsp</result>
+		</action>
+
+		<action name="SearchDivision" class="com.kovidRMS.action.LoginAction"
+			method="searchDivision">
+			<result name="success">manageDivision.jsp</result>
+			<result name="error">manageDivision.jsp</result>
+		</action>
+
+		<action name="ViewAllDivisions" class="com.kovidRMS.action.LoginAction"
+			method="viewAllDivisions">
+			<result name="success">manageDivision.jsp</result>
+			<result name="error">manageDivision.jsp</result>
+		</action>
+
+		<action name="RenderEditDivision" class="com.kovidRMS.action.LoginAction"
+			method="renderEditDivision">
+			<result name="success">manageDivision.jsp</result>
+			<result name="error">manageDivision.jsp</result>
+		</action>
+
+		<action name="AddDivision" class="com.kovidRMS.action.LoginAction"
+			method="addDivision">
+			<result name="success">manageDivision.jsp</result>
+			<result name="error">manageDivision.jsp</result>
+		</action>
+
+		<action name="EditDivision" class="com.kovidRMS.action.LoginAction"
+			method="editDivision">
+			<result name="success">manageDivision.jsp</result>
+			<result name="error">manageDivision.jsp</result>
+		</action>
+
+		<action name="SearchCommutations" class="com.kovidRMS.action.StudentAction"
+			method="searchCommutations">
+			<result name="success">manageCommutation.jsp</result>
+			<result name="error">manageCommutation.jsp</result>
+		</action>
+
+		<action name="ViewAllCommutations" class="com.kovidRMS.action.StudentAction"
+			method="viewAllCommutations">
+			<result name="success">manageCommutation.jsp</result>
+			<result name="error">manageCommutation.jsp</result>
+		</action>
+
+		<action name="RenderEditCommutation" class="com.kovidRMS.action.StudentAction"
+			method="renderEditCommutation">
+			<result name="success">manageCommutation.jsp</result>
+			<result name="error">manageCommutation.jsp</result>
+		</action>
+
+		<action name="AddCommutation" class="com.kovidRMS.action.StudentAction"
+			method="addCommutation">
+			<result name="success">manageCommutation.jsp</result>
+			<result name="error">manageCommutation.jsp</result>
+		</action>
+
+		<action name="EditCommutation" class="com.kovidRMS.action.StudentAction"
+			method="editCommutation">
+			<result name="success">manageCommutation.jsp</result>
+			<result name="error">manageCommutation.jsp</result>
+		</action>
+
+		<action name="DisableCommutation" class="com.kovidRMS.action.StudentAction"
+			method="deleteCommutation">
+			<result name="success">manageCommutation.jsp</result>
+			<result name="error">manageCommutation.jsp</result>
+		</action>
+
+		<action name="RenderconfigureAcademicYear" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderconfigureAcademicYear">
+			<result name="success">configureAcademicYear.jsp</result>
+			<result name="error">configureAcademicYear.jsp</result>
+		</action>
+		<action name="RenderLoadAcademicYear" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderLoadAcademicYear">
+			<result name="success">configureAcademicYear.jsp</result>
+			<result name="error">configureAcademicYear.jsp</result>
+		</action>
+
+		<action name="ConfigureAcademicYear" class="com.kovidRMS.action.ConfigurationAction"
+			method="configureAcademicYear">
+			<result name="success">configureAcademicYear.jsp</result>
+			<result name="error">configureAcademicYear.jsp</result>
+		</action>
+
+		<action name="RetrieveDivisionListForStandard" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveDivisionListForStandard" />
+		
+		<action name="RetrieveStandardForacademicYear" class="com.kovidRMS.action.StudentAction"
+			method="retrieveStandardForacademicYear" />
+			
+		<action name="RetrieveDivisionForacademicYear" class="com.kovidRMS.action.StudentAction"
+			method="retrieveDivisionForacademicYear" />
+				
+		<action name="RetrieveStandardListForacademicYear" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveStandardListForacademicYear" />
+			
+		<action name="RetrieveExaminationListByTerm" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveExaminationListByTerm" />
+	
+		<action name="RetrieveDivisionListForStandardForSibling" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveDivisionListForStandard" />
+
+		<action name="RetrieveSubjectListForStandard" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveSubjectListForStandard" />
+			
+		<action name="RetrieveScholasticSubjectListForStandard" class="com.kovidRMS.action.LoginAction"
+			method="retrieveScholasticSubjectListForStandard" />
+			
+		<action name="RenderconfigureExamination" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderconfigureExamination">
+			<result name="success">configureExamination.jsp</result>
+			<result name="error">configureExamination.jsp</result>
+		</action>
+		<action name="ConfigureExamination" class="com.kovidRMS.action.ConfigurationAction"
+			method="configureExamination">
+			<result name="success">configureExamination.jsp</result>
+			<result name="error">configureExamination.jsp</result>
+		</action>
+
+		<action name="DeleteRow" class="com.kovidRMS.action.ConfigurationAction"
+			method="deleteRow" />
+
+		<action name="RetrieveStandardName" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveStandardName" />
+			
+		<action name="RetrieveExamNameByExamID" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveExamNameByExamID" />
+
+		<action name="RetrieveDivisionName" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveDivisionName" />
+
+		<action name="RetrieveStudentName" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveStudentName" />
+
+		<action name="RetrieveTeacherName" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveTeacherName" />
+
+		<action name="RetrieveSubjectName" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveSubjectName" />
+			
+		<action name="RetrieveActivitiesName" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveActivitiesName" />
+			
+		<action name="RemoveactivityAssessmentRow" class="com.kovidRMS.action.ConfigurationAction"
+			method="removeactivityAssessmentRow" />
+
+		<action name="RetrieveActivityNameByactivityID" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveActivityNameByactivityID" />
+			
+		<action name="RetrieveSubjectTeacherName" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveSubjectTeacherName" />
+
+		<action name="RetrieveNewSubjectListForStandard" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveNewSubjectListForStandard" />
+
+		<action name="DeleteAYClassRow" class="com.kovidRMS.action.ConfigurationAction"
+			method="deleteAYClassRow" />
+			
+		<action name="DeleteStudentAssessmentRow" class="com.kovidRMS.action.ConfigurationAction"
+			method="deleteStudentAssessmentRow" />
+
+		<action name="RetrieveSubTeacherListByAYClassID" class="com.kovidRMS.action.ConfigurationAction"
+			method="RetrieveSubTeacherListByAYClassID" />
+		
+		<action name="RetrieveActivitiesListBysubjAssmntID" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveActivitiesListBysubjAssmntID" />
+
+		<action name="RemoveAYSubjectRow" class="com.kovidRMS.action.ConfigurationAction"
+			method="removeAYSubjectRow" />
+
+		<action name="RetrieveSubjectAssessmentDetails" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveSubjectAssessmentDetails" />
+
+		<action name="RenderconfigureSubjectAssessment" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderconfigureSubjectAssessment">
+			<result name="success">configureSubjectAssessment.jsp</result>
+			<result name="error">configureSubjectAssessment.jsp</result>
+		</action>
+
+		<action name="ConfigureSubjectAssessment" class="com.kovidRMS.action.ConfigurationAction"
+			method="configureSubjectAssessment">
+			<result name="success">configureSubjectAssessment.jsp</result>
+			<result name="error">configureSubjectAssessment.jsp</result>
+		</action>
+
+		<action name="AddSubjectAssessment" class="com.kovidRMS.action.ConfigurationAction"
+			method="addSubjectAssessment">
+			<result name="success">configureSubjectAssessment.jsp</result>
+			<result name="error">configureSubjectAssessment.jsp</result>
+		</action>
+
+		<action name="RenderConfigureMySubject" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderConfigureMySubject">
+			<result name="success">configureMySubject.jsp</result>
+			<result name="error">configureMySubject.jsp</result>
+		</action>
+		
+		<action name="RenderConfigurePersonlityDevelopment" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderConfigurePersonlityDevelopment">
+			<result name="success">configurePersonlityDevelopment.jsp</result>
+			<result name="error">configurePersonlityDevelopment.jsp</result>
+		</action>
+
+		<action name="RenderConfigureExtraCurricularActivity" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderConfigureExtraCurricularActivity">
+			<result name="success">configureExtraCurricularActivity.jsp</result>
+			<result name="error">configureExtraCurricularActivity.jsp</result>
+		</action>
+		
+		<action name="RenderConfigureCoScholastic" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderConfigureCoScholastic">
+			<result name="success">configureCoScholasticActivity.jsp</result>
+			<result name="error">configureCoScholasticActivity.jsp</result>
+		</action>
+		
+		<action name="LoadStudents" class="com.kovidRMS.action.ConfigurationAction"
+			method="loadStudents">
+			<result name="success">configureMySubject.jsp</result>
+			<result name="error">configureMySubject.jsp</result>
+		</action>
+
+		<action name="LoadStudentsForPersonlityDevelopment" class="com.kovidRMS.action.ConfigurationAction"
+			method="loadStudentsForPersonlityDevelopment">
+			<result name="success">configurePersonlityDevelopment.jsp</result>
+			<result name="error">configurePersonlityDevelopment.jsp</result>
+		</action>
+		
+		<action name="LoadStudentsByCoScholastic" class="com.kovidRMS.action.ConfigurationAction"
+			method="loadStudentsByCoScholastic">
+			<result name="success">configureCoScholasticActivity.jsp</result>
+			<result name="error">configureCoScholasticActivity.jsp</result>
+		</action>
+		
+		<action name="LoadStudentsForExtraCurricular" class="com.kovidRMS.action.ConfigurationAction"
+			method="loadStudentsForExtraCurricular">
+			<result name="success">configureExtraCurricularActivity.jsp</result>
+			<result name="error">configureExtraCurricularActivity.jsp</result>
+		</action>
+		
+		<action name="AddStudentAssessmentForPersonalityDevelopment" class="com.kovidRMS.action.ConfigurationAction"
+			method="addStudentAssessment">
+			<result name="success">configurePersonlityDevelopment.jsp</result>
+			<result name="error">configurePersonlityDevelopment.jsp</result>
+		</action>
+		
+		<action name="AddStudentAssessmentForCoScholastic" class="com.kovidRMS.action.ConfigurationAction"
+			method="addStudentAssessmentForCoScholastic">
+			<result name="success">configureCoScholasticActivity.jsp</result>
+			<result name="error">configureCoScholasticActivity.jsp</result>
+		</action>
+		
+		<action name="GenerateGradesForPersonalityDevelopment" class="com.kovidRMS.action.ConfigurationAction"
+			method="generateGradesForPersonalityDevelopment">
+			<result name="success">configurePersonlityDevelopment.jsp</result>
+			<result name="error">configurePersonlityDevelopment.jsp</result>
+		</action>
+		
+		
+		<action name="AddStudentAssessmentForExtraCurricular" class="com.kovidRMS.action.ConfigurationAction"
+			method="addStudentAssessment">
+			<result name="success">configureExtraCurricularActivity.jsp</result>
+			<result name="error">configureExtraCurricularActivity.jsp</result>
+		</action>
+		
+		<action name="RenderClassSubject" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderClassSubject">
+			<result name="success">myClass.jsp</result>
+			<result name="error">myClass.jsp</result>
+		</action>
+
+		<action name="LoadMyClassStudent" class="com.kovidRMS.action.ConfigurationAction"
+			method="loadMyClassStudent">
+			<result name="success">myClass.jsp</result>
+			<result name="error">myClass.jsp</result>
+		</action>
+
+		<action name="AddStudentAssessment" class="com.kovidRMS.action.ConfigurationAction"
+			method="addStudentAssessment">
+			<result name="success">configureMySubject.jsp</result>
+			<result name="error">configureMySubject.jsp</result>
+		</action>
+
+		<action name="RetrieveStudentListForStandardAndDivision" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveStudentListForStandardAndDivision" />
+
+		<action name="DeleteAttendanceRow" class="com.kovidRMS.action.LoginAction"
+			method="deleteAttendanceRow" />
+
+		<action name="CheckAttendanceAvailability" class="com.kovidRMS.action.LoginAction"
+			method="checkAttendanceAvailability" />
+			
+		<action name="RetrieveCondition" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveCondition" />
+
+		<action name="DeleteMedConditionRow" class="com.kovidRMS.action.StudentAction"
+			method="deleteMedConditionRow" />
+			
+		<action name="DeleteActivityRow" class="com.kovidRMS.action.StudentAction"
+			method="deleteActivityRow" />
+
+		<action name="RetrieveSubjectListByUserID" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveSubjectListByUserID" />
+			
+		<action name="RetrieveSubjectListByUserIDAndstandard" class="com.kovidRMS.action.StudentAction"
+			method="retrieveSubjectListByUserIDAndstandard" />
+		
+		<action name="RetrieveSubjectListBystandardForNonScholastic" class="com.kovidRMS.action.StudentAction"
+			method="retrieveSubjectListBystandardForNonScholastic" />
+			
+		<action name="RetrieveSubjectListByUserIDandStandardID" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveSubjectListByUserIDandStandardID" />
+			
+		<action name="RetrieveSubjectListByUserIDForPersonalityDevelopment" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveSubjectListByUserIDForPersonalityDevelopment" />
+			
+		<action name="VerifySubjectAssessmentIDPresent" class="com.kovidRMS.action.ConfigurationAction"
+			method="verifySubjectAssessmentIDPresent" />	
+			
+		<action name="RetrieveSubjectListByUserIDForCoScholastic" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveSubjectListByUserIDForCoScholastic" />
+
+		<action name="RetrieveExamListByTermAndAcademicYearID" class="com.kovidRMS.action.StudentAction"
+			method="retrieveExamListByTermAndAcademicYearID" />
+			
+		<action name="VerifySubjeType" class="com.kovidRMS.action.StudentAction"
+			method="verifySubjeType" />
+	
+		<action name="RetrieveExamTermEnd" class="com.kovidRMS.action.StudentAction"
+			method="retrieveExamTermEnd" />
+			
+		<action name="RetrieveSubjectListByUserIDForExtraCurricular" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveSubjectListByUserIDForExtraCurricular" />
+			
+		<action name="RetrieveSubjectListByUserIDExamType" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveSubjectListByUserIDExamType" />
+
+		<action name="RenderClassStudents" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderClassStudents">
+			<result name="success">reportCard.jsp</result>
+			<result name="error">reportCard.jsp</result>
+		</action>
+		
+		<action name="RenderReportCardReview" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderReportCardReview">
+			<result name="success">reportCardReview.jsp</result>
+			<result name="error">reportCardReview.jsp.jsp</result>
+		</action>
+
+		<action name="LoadClassStudentReview" class="com.kovidRMS.action.ConfigurationAction"
+			method="loadClassStudentReview">
+			<result name="success">reportCardReview.jsp</result>
+			<result name="error">reportCardReview.jsp</result>
+		</action>
+		
+		<action name="LoadClassStudent" class="com.kovidRMS.action.ConfigurationAction"
+			method="loadClassStudent">
+			<result name="success">reportCard.jsp</result>
+			<result name="error">reportCard.jsp</result>
+		</action>
+		
+		<action name="LoadClassStudentHistoryReport" class="com.kovidRMS.action.ConfigurationAction"
+			method="loadClassStudentHistoryReport">
+			<result name="success">reportCardHistory.jsp</result>
+			<result name="error">reportCardHistory.jsp</result>
+		</action>
+
+		<action name="ConfigureCBSCReport" class="com.kovidRMS.action.ConfigurationAction"
+			method="configureReport">
+			<result name="success">reportPage.jsp</result>
+			<result name="error">reportPage.jsp</result>
+		</action>
+		
+		<action name="ConfigureSSCReport" class="com.kovidRMS.action.ConfigurationAction"
+			method="configureReport">
+			<result name="success">NewReportPage.jsp</result>
+			<result name="error">NewReportPage.jsp</result>
+		</action>
+		
+		<action name="ConfigureReportReview" class="com.kovidRMS.action.ConfigurationAction"
+			method="configureReportReview">
+			<result name="success">reportPageReview.jsp</result>
+			<result name="error">reportPageReview.jsp</result>
+		</action>
+		
+		<action name="ConfigureHistoryReport" class="com.kovidRMS.action.ConfigurationAction"
+			method="configureHistoryReport">
+			<result name="success">reportHistoryPage.jsp</result>
+			<result name="error">reportHistoryPage.jsp</result>
+		</action>
+
+		<action name="RenderStudentAttendance" class="com.kovidRMS.action.StudentAction"
+			method="renderStudentAttendance">
+			<result name="success">studentAttendance.jsp</result>
+			<result name="error">studentAttendance.jsp</result>
+		</action>
+
+		<action name="LoadStudentForAttendance" class="com.kovidRMS.action.StudentAction"
+			method="loadStudentForAttendance">
+			<result name="success">studentAttendance.jsp</result>
+			<result name="error">studentAttendance.jsp</result>
+		</action>
+
+		<action name="StudentReportPDF" class="com.kovidRMS.action.ConfigurationAction"
+			method="studentReportPDF">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">reportPage.jsp</result>
+			<result name="input">reportPage.jsp</result>
+		</action>
+		
+		<action name="StudentReportReviewPDF" class="com.kovidRMS.action.ConfigurationAction"
+			method="studentReportReviewPDF">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">reportPageReview.jsp</result>
+			<result name="input">reportPageReview.jsp</result>
+		</action>
+		
+		<action name="StudentHistoryReportPDF" class="com.kovidRMS.action.ConfigurationAction"
+			method="studentHistoryReportPDF">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">reportHistoryPage.jsp</result>
+			<result name="input">reportHistoryPage.jsp</result>
+		</action>
+
+		<action name="AllStudentReportPDF" class="com.kovidRMS.action.ConfigurationAction"
+			method="allStudentReportPDF">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">reportCard.jsp</result>
+			<result name="input">reportCard.jsp</result>
+		</action>
+		
+		<action name="StudentsCustomReportExcel" class="com.kovidRMS.action.ConfigurationAction"
+			method="studentsCustomReportExcel">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">myClass.jsp</result>
+			<result name="input">myClass.jsp</result>
+		</action>
+
+		<action name="RetrieveworkingMonthForAttendance" class="com.kovidRMS.action.StudentAction"
+			method="retrieveworkingMonthForAttendance" />
+
+		<action name="AddAttendance" class="com.kovidRMS.action.StudentAction"
+			method="addAttendance">
+			<result name="success">studentAttendance.jsp</result>
+			<result name="error">studentAttendance.jsp</result>
+		</action>
+
+		<action name="RetrieveStudentAssessmentHistroy" method="retrieveStudentAssessmentHistroy"
+			class="com.kovidRMS.action.ConfigurationAction" />
+			
+		<action name="RenderStudentsCustomReport" class="com.kovidRMS.action.StudentAction"
+			method="renderStudentsCustomReport">
+			<result name="success">studentCustomReport.jsp</result>
+			<result name="error">studentCustomReport.jsp</result>
+		</action>
+		
+		<action name="RenderExamCustomReport" class="com.kovidRMS.action.StudentAction"
+			method="renderExamCustomReport">
+			<result name="success">examCustomReport.jsp</result>
+			<result name="error">examCustomReport.jsp</result>
+		</action>
+		
+		<action name="RenderReportCardHistory" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderReportCardHistory">
+			<result name="success">reportCardHistory.jsp</result>
+			<result name="error">reportCardHistory.jsp</result>
+		</action>
+		
+		<action name="LoadExamCustomStudents" class="com.kovidRMS.action.StudentAction"
+			method="loadExamCustomStudents">
+			<result name="success">examCustomReport.jsp</result>
+			<result name="error">examCustomReport.jsp</result>
+		</action>
+		
+		<action name="RenderManageTimeTable" class="com.kovidRMS.action.LoginAction"
+			method="renderManageTimeTable">
+			<result name="success">manageTimeTable.jsp</result>
+			<result name="error">manageTimeTable.jsp</result>
+		</action>
+		
+		<action name="AddTimeTable" class="com.kovidRMS.action.LoginAction"
+			method="addTimeTable">
+			<result name="success">manageTimeTable.jsp</result>
+			<result name="error">manageTimeTable.jsp</result>
+		</action>
+		
+		<action name="LoadCustomStudents" class="com.kovidRMS.action.StudentAction"
+			method="loadCustomStudents">
+			<result name="success">studentCustomReport.jsp</result>
+			<result name="error">studentCustomReport.jsp</result>
+		</action>
+
+		<action name="GenerateAllStudentReportExcel" class="com.kovidRMS.action.StudentAction"
+			method="generateAllStudentReportExcel">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">studentCustomReport.jsp</result>
+			<result name="input">studentCustomReport.jsp</result>
+		</action>
+		
+		<action name="GenerateAllExamReportExcel" class="com.kovidRMS.action.StudentAction"
+			method="generateAllExamReportExcel">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">examCustomReport.jsp</result>
+			<result name="input">examCustomReport.jsp</result>
+		</action>
+		
+		<action name="GenerateAllExamHistoryReportExcel" class="com.kovidRMS.action.StudentAction"
+			method="generateAllExamHistoryReportExcel">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">examHistoryReport.jsp</result>
+			<result name="input">examHistoryReport.jsp</result>
+		</action>
+		
+		<action name="RenderImportExport" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderImportExport">
+			<result name="success">ImportExport.jsp</result>
+			<result name="error">ImportExport.jsp</result>
+		</action>
+		
+		<action name="ExportStudentHistoryReportExcel" class="com.kovidRMS.action.ConfigurationAction"
+			method="exportStudentHistoryReportExcel">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">ImportExport.jsp</result>
+			<result name="input">ImportExport.jsp</result>
+		</action>
+		
+		<action name="ImportStudentHistoryReportExcel" class="com.kovidRMS.action.ConfigurationAction"
+			method="importStudentHistoryReportExcel">
+			<result name="success">ImportExport.jsp</result>
+			<result name="error">ImportExport.jsp</result>
+		</action>
+		
+		<action name="ImportConfiguration" class="com.kovidRMS.action.ConfigurationAction"
+			method="importConfiguration">
+			<result name="success">ImportExport.jsp</result>
+			<result name="error">ImportExport.jsp</result>
+		</action>
+		
+		<action name="ExportConfiguration" class="com.kovidRMS.action.ConfigurationAction"
+			method="exportConfiguration">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">ImportExport.jsp</result>
+			<result name="input">ImportExport.jsp</result>
+		</action>
+		
+		<action name="RenderXthSTDStudentsReport" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderXthSTDStudentsReport">
+			<result name="success">stdXthCustomReport.jsp</result>
+			<result name="error">stdXthCustomReport.jsp</result>
+		</action>
+		
+		<action name="RetrieveXthSTDSubjectListByUserIDandStandardID" class="com.kovidRMS.action.ConfigurationAction"
+			method="retrieveXthSTDSubjectListByUserIDandStandardID" />
+		
+		<action name="XthSTDStudentsCustomReportExcel" class="com.kovidRMS.action.ConfigurationAction"
+			method="xthSTDStudentsCustomReportExcel">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">stdXthCustomReport.jsp</result>
+			<result name="input">stdXthCustomReport.jsp</result>
+		</action>
+			
+		<action name="RenderloadLeavingStudent" class="com.kovidRMS.action.ConfigurationAction"
+			method="renderloadLeavingStudent">
+			<result name="success">manageleavingCertificate.jsp</result>
+			<result name="error">manageleavingCertificate.jsp</result>
+		</action>
+		
+		<action name="LoadLeavingStudent" class="com.kovidRMS.action.ConfigurationAction"
+			method="loadLeavingStudent">
+			<result name="success">manageleavingCertificate.jsp</result>
+			<result name="error">manageleavingCertificate.jsp</result>
+		</action>
+		
+		<action name="LeavingCertificate" class="com.kovidRMS.action.ConfigurationAction"
+			method="leavingCertificate">
+			<result name="success">leavingCertificate.jsp</result>
+			<result name="error">leavingCertificate.jsp</result>
+		</action>
+		
+		<action name="MarathiLeavingCertificate" class="com.kovidRMS.action.ConfigurationAction"
+			method="leavingCertificate">
+			<result name="success">NewLeavingCertificate.jsp</result>
+			<result name="error">NewLeavingCertificate.jsp</result>
+		</action>
+		
+		<action name="ConfigureLeavingCertificate" class="com.kovidRMS.action.ConfigurationAction"
+			method="configureLeavingCertificate">
+			<result name="success">leavingCertificate.jsp</result>
+			<result name="error">leavingCertificate.jsp</result>
+		</action>
+		
+		<action name="LeavingCertificatePDF" class="com.kovidRMS.action.ConfigurationAction"
+			method="leavingCertificatePDF">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">leavingCertificate.jsp</result>
+			<result name="input">leavingCertificate.jsp</result>
+		</action>
+		
+		<action name="AllStudentLeavingReportPDF" class="com.kovidRMS.action.ConfigurationAction"
+			method="allStudentLeavingReportPDF">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">manageleavingCertificate.jsp</result>
+			<result name="input">manageleavingCertificate.jsp</result>
+		</action>
+		
+		<action name="StudentsHistoryCustomReportExcel" class="com.kovidRMS.action.ConfigurationAction"
+			method="studentsHistoryCustomReportExcel">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">reportCardHistory.jsp</result>
+			<result name="input">reportCardHistory.jsp</result>
+		</action>
+		
+		<action name="StudentExcelReport" class="com.kovidRMS.action.StudentAction"
+			method="studentExcelReport">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">reportPage.jsp</result>
+			<result name="input">reportPage.jsp</result>
+		</action>
+		
+		<action name="StudentsPersonalityReportExcel" class="com.kovidRMS.action.ConfigurationAction"
+			method="studentsPersonalityReportExcel">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">configurePersonlityDevelopment.jsp</result>
+			<result name="input">configurePersonlityDevelopment.jsp</result>
+		</action>
+		
+		<action name="StudentsCoScholasticReportExcel" class="com.kovidRMS.action.ConfigurationAction"
+			method="studentsCoScholasticReportExcel">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">configureCoScholasticActivity.jsp</result>
+			<result name="input">configureCoScholasticActivity.jsp</result>
+		</action>
+		
+		<action name="StudentsAttendanceReportExcel" class="com.kovidRMS.action.ConfigurationAction"
+			method="studentsAttendanceReportExcel">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">studentAttendance.jsp</result>
+			<result name="input">studentAttendance.jsp</result>
+		</action>
+		
+		<action name="RenderConfigureConsolidatedSheet" class="com.kovidRMS.action.StudentAction"
+			method="renderConfigureConsolidatedSheet">
+			<result name="success">consolidatedSheet.jsp</result>
+			<result name="error">consolidatedSheet.jsp</result>
+		</action>
+		
+		<action name="GenerateConsolidatedExamReportExcel" class="com.kovidRMS.action.StudentAction"
+			method="generateConsolidatedExamReportExcel">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">consolidatedSheet.jsp</result>
+			<result name="input">consolidatedSheet.jsp</result>
+		</action>
+		
+		<action name="GenerateBifurcationExamReportExcel" class="com.kovidRMS.action.StudentAction"
+			method="generateBifurcationExamReportExcel">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">consolidatedSheet.jsp</result>
+			<result name="input">consolidatedSheet.jsp</result>
+		</action>
+		
+		<action name="ConfigureClassStudentsStatus" class="com.kovidRMS.action.ConfigurationAction"
+			method="configureClassStudentsStatus">
+			<result name="success">reportCard.jsp</result>
+			<result name="error">reportCard.jsp</result>
+		</action>
+		
+		<action name="EmailStudentsReportPDF" class="com.kovidRMS.action.ConfigurationAction"
+			method="emailStudentsReportPDF">
+			<result name="success">reportCard.jsp</result>
+			<result name="error">reportCard.jsp</result>
+		</action>
+		
+		<action name="AllStudentsEmailReportPDF" class="com.kovidRMS.action.ConfigurationAction"
+			method="allStudentsEmailReportPDF">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">reportCard.jsp</result>
+			<result name="input">reportCard.jsp</result>
+		</action>
+		
+		<action name="RenderConfigureRules" class="com.kovidRMS.action.LibraryAction"
+			method="renderConfigureRules">
+			<result name="success">configureRules.jsp</result>
+			<result name="error">configureRules.jsp</result>
+		</action>
+
+		<action name="ConfigureRules" class="com.kovidRMS.action.LibraryAction"
+			method="configureRules">
+			<result name="success">configureRules.jsp</result>
+			<result name="error">configureRules.jsp</result>
+		</action>
+		
+		<action name="ConfigureEditRules" class="com.kovidRMS.action.LibraryAction"
+			method="configureEditRules">
+			<result name="success">configureRules.jsp</result>
+			<result name="error">configureRules.jsp</result>
+		</action>
+
+		<action name="SearchBookType" class="com.kovidRMS.action.LibraryAction"
+			method="searchBookType">
+			<result name="success">configurePVBookType.jsp</result>
+			<result name="error">configurePVBookType.jsp</result>
+		</action>
+
+		<action name="ViewAllBookTypes" class="com.kovidRMS.action.LibraryAction"
+			method="viewAllBookTypes">
+			<result name="success">configurePVBookType.jsp</result>
+			<result name="error">configurePVBookType.jsp</result>
+		</action>
+
+		<action name="RenderEditBookType" class="com.kovidRMS.action.LibraryAction"
+			method="renderEditBookType">
+			<result name="success">configurePVBookType.jsp</result>
+			<result name="error">configurePVBookType.jsp</result>
+		</action>
+
+		<action name="AddBookType" class="com.kovidRMS.action.LibraryAction"
+			method="addBookType">
+			<result name="success">configurePVBookType.jsp</result>
+			<result name="error">configurePVBookType.jsp</result>
+		</action>
+
+		<action name="EditBookType" class="com.kovidRMS.action.LibraryAction"
+			method="editBookType">
+			<result name="success">configurePVBookType.jsp</result>
+			<result name="error">configurePVBookType.jsp</result>
+		</action>
+
+		<action name="DisableBookType" class="com.kovidRMS.action.LibraryAction"
+			method="deleteBookType">
+			<result name="success">configurePVBookType.jsp</result>
+			<result name="error">configurePVBookType.jsp</result>
+		</action>
+		
+		<action name="SearchGenre" class="com.kovidRMS.action.LibraryAction"
+			method="searchGenre">
+			<result name="success">configurePVGenre.jsp</result>
+			<result name="error">configurePVGenre.jsp</result>
+		</action>
+
+		<action name="ViewAllGenres" class="com.kovidRMS.action.LibraryAction"
+			method="viewAllGenres">
+			<result name="success">configurePVGenre.jsp</result>
+			<result name="error">configurePVGenre.jsp</result>
+		</action>
+
+		<action name="RenderEditGenre" class="com.kovidRMS.action.LibraryAction"
+			method="renderEditGenre">
+			<result name="success">configurePVGenre.jsp</result>
+			<result name="error">configurePVGenre.jsp</result>
+		</action>
+
+		<action name="AddGenre" class="com.kovidRMS.action.LibraryAction"
+			method="addGenre">
+			<result name="success">configurePVGenre.jsp</result>
+			<result name="error">configurePVGenre.jsp</result>
+		</action>
+
+		<action name="EditGenre" class="com.kovidRMS.action.LibraryAction"
+			method="editGenre">
+			<result name="success">configurePVGenre.jsp</result>
+			<result name="error">configurePVGenre.jsp</result>
+		</action>
+
+		<action name="DisableGenre" class="com.kovidRMS.action.LibraryAction"
+			method="deleteGenre">
+			<result name="success">configurePVGenre.jsp</result>
+			<result name="error">configurePVGenre.jsp</result>
+		</action>
+		
+		<action name="RenderConfigureSection" class="com.kovidRMS.action.LibraryAction"
+			method="renderConfigureSection">
+			<result name="success">configurePVSection.jsp</result>
+			<result name="error">configurePVSection.jsp</result>
+		</action>
+		
+		<action name="SearchSection" class="com.kovidRMS.action.LibraryAction"
+			method="searchSection">
+			<result name="success">configurePVSection.jsp</result>
+			<result name="error">configurePVSection.jsp</result>
+		</action>
+
+		<action name="ViewAllSections" class="com.kovidRMS.action.LibraryAction"
+			method="viewAllSections">
+			<result name="success">configurePVSection.jsp</result>
+			<result name="error">configurePVSection.jsp</result>
+		</action>
+
+		<action name="RenderEditSection" class="com.kovidRMS.action.LibraryAction"
+			method="renderEditSection">
+			<result name="success">configurePVSection.jsp</result>
+			<result name="error">configurePVSection.jsp</result>
+		</action>
+
+		<action name="AddSection" class="com.kovidRMS.action.LibraryAction"
+			method="addSection">
+			<result name="success">configurePVSection.jsp</result>
+			<result name="error">configurePVSection.jsp</result>
+		</action>
+
+		<action name="EditSection" class="com.kovidRMS.action.LibraryAction"
+			method="editSection">
+			<result name="success">configurePVSection.jsp</result>
+			<result name="error">configurePVSection.jsp</result>
+		</action>
+
+		<action name="DisableSection" class="com.kovidRMS.action.LibraryAction"
+			method="deleteSection">
+			<result name="success">configurePVSection.jsp</result>
+			<result name="error">configurePVSection.jsp</result>
+		</action>
+		
+		<action name="SearchVendor" class="com.kovidRMS.action.LibraryAction"
+			method="searchVendor">
+			<result name="success">configurePVVendors.jsp</result>
+			<result name="error">configurePVVendors.jsp</result>
+		</action>
+
+		<action name="ViewAllVendors" class="com.kovidRMS.action.LibraryAction"
+			method="viewAllVendors">
+			<result name="success">configurePVVendors.jsp</result>
+			<result name="error">configurePVVendors.jsp</result>
+		</action>
+
+		<action name="RenderEditVendor" class="com.kovidRMS.action.LibraryAction"
+			method="renderEditVendor">
+			<result name="success">configurePVVendors.jsp</result>
+			<result name="error">configurePVVendors.jsp</result>
+		</action>
+
+		<action name="AddVendor" class="com.kovidRMS.action.LibraryAction"
+			method="addVendor">
+			<result name="success">configurePVVendors.jsp</result>
+			<result name="error">configurePVVendors.jsp</result>
+		</action>
+
+		<action name="EditVendor" class="com.kovidRMS.action.LibraryAction"
+			method="editVendor">
+			<result name="success">configurePVVendors.jsp</result>
+			<result name="error">configurePVVendors.jsp</result>
+		</action>
+
+		<action name="DisableVendor" class="com.kovidRMS.action.LibraryAction"
+			method="deleteVendor">
+			<result name="success">configurePVVendors.jsp</result>
+			<result name="error">configurePVVendors.jsp</result>
+		</action>
+		
+		<action name="RenderManageCupboardShelves" class="com.kovidRMS.action.LibraryAction"
+			method="renderManageCupboardShelves">
+			<result name="success">configureCupboard.jsp</result>
+			<result name="error">configureCupboard.jsp</result>
+			<result name="input">configureCupboard.jsp</result>
+		</action>
+		
+		<action name="ConfigureCupboard" class="com.kovidRMS.action.LibraryAction"
+			method="configureCupboard">
+			<result name="success">configureCupboard.jsp</result>
+			<result name="error">configureCupboard.jsp</result>
+			<result name="input">configureCupboard.jsp</result>
+		</action>
+		
+		<action name="ConfigureShelf" class="com.kovidRMS.action.LibraryAction"
+			method="configureShelf">
+			<result name="success">configureCupboard.jsp</result>
+			<result name="error">configureCupboard.jsp</result>
+			<result name="input">configureCupboard.jsp</result>
+		</action>
+		
+		<action name="RetrieveCupboardName" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveCupboardName" />
+			
+		<action name="RetrieveShelfName" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveShelfName" />
+		
+		<action name="RetrieveShelfDetails" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveShelfDetails" />
+		
+		<action name="RemoveShelfRow" class="com.kovidRMS.action.LibraryAction"
+			method="removeShelfRow" />
+			
+		<action name="RemoveCupboardRow" class="com.kovidRMS.action.LibraryAction"
+			method="removeCupboardRow" />
+			
+		<action name="ImportBooksHistoryReportExcel" class="com.kovidRMS.action.LibraryAction"
+			method="importBooksHistoryReportExcel">
+			<result name="success">ImportExport.jsp</result>
+			<result name="error">ImportExport.jsp</result>
+		</action>
+			
+		<action name="RenderManageBook" class="com.kovidRMS.action.LibraryAction"
+			method="renderManageBook">
+			<result name="success">addBooks.jsp</result>
+			<result name="error">addBooks.jsp</result>
+		</action>
+		
+		<action name="AddBooks" class="com.kovidRMS.action.LibraryAction"
+			method="addBooks">
+			<result name="success">addBooks.jsp</result>
+			<result name="error">addBooks.jsp</result>
+		</action>
+		
+		<action name="RenderBookList" class="com.kovidRMS.action.LibraryAction"
+			method="renderBookList">
+			<result name="success">editBookList.jsp</result>
+			<result name="error">editBookList.jsp</result>
+		</action>
+		
+		<action name="SearchBooks" class="com.kovidRMS.action.LibraryAction"
+			method="searchBooks">
+			<result name="success">editBookList.jsp</result>
+			<result name="error">editBookList.jsp</result>
+		</action>
+
+		<action name="RenderEditBooksList" class="com.kovidRMS.action.LibraryAction"
+			method="renderEditBooksList">
+			<result name="success">editBookList.jsp</result>
+			<result name="error">editBookList.jsp</result>
+		</action>
+
+		<action name="RenderEditBook" class="com.kovidRMS.action.LibraryAction"
+			method="renderEditBook">
+			<result name="success">editBook.jsp</result>
+			<result name="error">editBook.jsp</result>
+		</action>
+		
+		<action name="UpdateBook" class="com.kovidRMS.action.LibraryAction"
+			method="updateBook">
+			<result name="success">editBookList.jsp</result>
+			<result name="error">editBookList.jsp</result>
+		</action>
+
+		<action name="EditBook" class="com.kovidRMS.action.LibraryAction"
+			method="editBook">
+			<result name="success">editBook.jsp</result>
+			<result name="error">editBook.jsp</result>
+			<result name="input">editBook.jsp</result>
+		</action>
+		
+		<action name="RetrieveStatusByBookID" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveStatusByBookID" />
+			
+		<action name="RemoveStatusRow" class="com.kovidRMS.action.LibraryAction"
+			method="removeStatusRow" />
+			
+		<action name="RetrieveBookName" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveBookName" />
+			
+		<action name="RetrieveBookNameCount" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveBookNameCount" />
+			
+		<action name="RenderconfigureStudentIssue" class="com.kovidRMS.action.LibraryAction"
+			method="renderconfigureStudentIssue">
+			<result name="success">configureStudentIssue.jsp</result>
+			<result name="error">configureStudentIssue.jsp</result>
+		</action>
+		
+		<action name="RetrieveStudentDetailsByClassID" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveStudentDetailsByClassID" />
+			
+		<action name="RetrieveClassLevelByClassID" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveClassLevelByClassID" />
+			
+		<action name="RetrieveRulesDetailsByClassLevel" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveRulesDetailsByClassLevel" />
+			
+		<action name="RetrieveStudentsBookIssueCount" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveStudentsBookIssueCount" />
+			
+		<action name="IssueStudentBooks" class="com.kovidRMS.action.LibraryAction"
+			method="issueStudentBooks">
+			<result name="success">configureStudentIssue.jsp</result>
+			<result name="error">configureStudentIssue.jsp</result>
+		</action>
+		
+		<action name="ReturnBook" class="com.kovidRMS.action.LibraryAction"
+			method="returnBook">
+			<result name="success">configureStudentIssue.jsp</result>
+			<result name="error">configureStudentIssue.jsp</result>
+		</action>
+		
+		<action name="RetrieveIssuedBooks" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveIssuedBooks" />
+			
+		<action name="RetrieveStudentDetailsForBookReturn" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveStudentDetailsForBookReturn" />
+
+		<action name="RetrieveBooksByScanValue" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveBooksByScanValue" />
+		
+		<action name="RenderconfigureStaffIssue" class="com.kovidRMS.action.LibraryAction"
+			method="renderconfigureStaffIssue">
+			<result name="success">configureStaffIssue.jsp</result>
+			<result name="error">configureStaffIssue.jsp</result>
+		</action>
+		
+		<action name="RetrieveStaffDetailsByRole" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveStaffDetailsByRole" />
+			
+		<action name="RetrieveStaffsIssuedBooks" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveStaffsIssuedBooks" />
+			
+		<action name="RetrieveStaffsBookIssueCount" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveStaffsBookIssueCount" />
+		
+		<action name="IssueStaffBooks" class="com.kovidRMS.action.LibraryAction"
+			method="issueStaffBooks">
+			<result name="success">configureStaffIssue.jsp</result>
+			<result name="error">configureStaffIssue.jsp</result>
+		</action>	
+		
+		<action name="RetrieveStaffDetailsForBookReturn" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveStaffDetailsForBookReturn" />
+		
+		<action name="ReturnStaffBooks" class="com.kovidRMS.action.LibraryAction"
+			method="returnStaffBooks">
+			<result name="success">configureStaffIssue.jsp</result>
+			<result name="error">configureStaffIssue.jsp</result>
+		</action>		
+		
+		<action name="ExportInventoryReport" class="com.kovidRMS.action.LibraryAction"
+			method="exportInventoryReport">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">inventoryBookReport.jsp</result>
+			<result name="input">inventoryBookReport.jsp</result>
+		</action>
+		
+		<action name="PrintInventoryReport" class="com.kovidRMS.action.LibraryAction"
+			method="printInventoryReport">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">inventoryBookReport.jsp</result>
+			<result name="input">inventoryBookReport.jsp</result>
+		</action>
+		
+		<action name="RenderInventoryReport" class="com.kovidRMS.action.LibraryAction"
+			method="renderInventoryReport">
+			<result name="success">inventoryBookReport.jsp</result>
+			<result name="error">inventoryBookReport.jsp</result>
+		</action>
+		
+		<action name="RetrieveStandardDivisionListByAcademicYearID" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveStandardDivisionListByAcademicYearID" />
+		
+		
+		<action name="RenderStudentsReport" class="com.kovidRMS.action.LibraryAction"
+			method="renderStudentsReport">
+			<result name="success">studentsBookReport.jsp</result>
+			<result name="error">studentsBookReport.jsp</result>
+		</action>
+		
+		<action name="RenderStaffReport" class="com.kovidRMS.action.LibraryAction"
+			method="renderStaffReport">
+			<result name="success">staffBookReport.jsp</result>
+			<result name="error">staffBookReport.jsp</result>
+		</action>
+		
+		<action name="ExportStudentsReport" class="com.kovidRMS.action.LibraryAction"
+			method="exportStudentsReport">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">studentsBookReport.jsp</result>
+			<result name="input">studentsBookReport.jsp</result>
+		</action>
+		
+		<action name="ExportStaffsReport" class="com.kovidRMS.action.LibraryAction"
+			method="exportStaffsReport">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">staffBookReport.jsp</result>
+			<result name="input">staffBookReport.jsp</result>
+		</action>
+			
+		<action name="RenderMoveBook" class="com.kovidRMS.action.LibraryAction"
+			method="renderMoveBook">
+			<result name="success">transferBook.jsp</result>
+			<result name="error">transferBook.jsp</result>
+			<result name="input">transferBook.jsp</result>
+		</action>
+		
+		<action name="LoadBooksDetails" class="com.kovidRMS.action.LibraryAction"
+			method="loadBooksDetails">
+			<result name="success">transferBook.jsp</result>
+			<result name="error">transferBook.jsp</result>
+			<result name="input">transferBook.jsp</result>
+		</action>
+		
+		<action name="MoveBooks" class="com.kovidRMS.action.LibraryAction"
+			method="moveBooks">
+			<result name="success">transferBook.jsp</result>
+			<result name="error">transferBook.jsp</result>
+			<result name="input">transferBook.jsp</result>
+		</action>
+		
+		<action name="RetrieveDelayedStudents" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveDelayedStudents" />
+		
+		<action name="RetrieveDelayedStaffs" class="com.kovidRMS.action.LibraryAction"
+			method="retrieveDelayedStaffs" />
+		
+		<action name="ChangeOrganization" class="com.kovidRMS.action.LoginAction" 
+			method="changeOrganization">
+			<result name="success">welcome.jsp</result>
+			<result name="error">welcome.jsp</result>
+		</action>
+		
+		<action name="RenderElection" class="com.kovidRMS.action.VotingAction"
+			method="renderElection">
+			<result name="success">setElectionPage.jsp</result>
+			<result name="error">setElectionPage.jsp</result>
+		</action>
+		
+		<action name="RenderVoting" class="com.kovidRMS.action.VotingAction"
+			method="renderVoting">
+			<result name="success">voting.jsp</result>
+			<result name="error">voting.jsp</result>
+		</action>	
+		
+		<action name="ConfigureVotingDetails" class="com.kovidRMS.action.VotingAction"
+			method="configureVotingDetails">
+			<result name="success">setElectionPage.jsp</result>
+			<result name="error">setElectionPage.jsp</result>
+		</action>
+		
+		<action name="UpdateVotingDetails" class="com.kovidRMS.action.VotingAction"
+			method="updateVotingDetails">
+			<result name="success">setElectionPage.jsp</result>
+			<result name="error">setElectionPage.jsp</result>
+		</action>
+		
+		<action name="RetrieveHeadGirlDetails" class="com.kovidRMS.action.VotingAction"
+			method="retrieveHeadGirlDetails" />
+		
+		<action name="RetrieveHeadBoyDetails" class="com.kovidRMS.action.VotingAction"
+			method="retrieveHeadBoyDetails" />
+		
+		<action name="RetrieveHouseCaptainRedDetails" class="com.kovidRMS.action.VotingAction"
+			method="retrieveHouseCaptainRedDetails" />
+
+		<action name="RetrieveHouseCaptainBlueDetails" class="com.kovidRMS.action.VotingAction"
+			method="retrieveHouseCaptainBlueDetails" />
+			
+		<action name="RetrieveHouseCaptainGreenDetails" class="com.kovidRMS.action.VotingAction"
+			method="retrieveHouseCaptainGreenDetails" />
+			
+		<action name="RetrieveHouseCaptainYellowDetails" class="com.kovidRMS.action.VotingAction"
+			method="retrieveHouseCaptainYellowDetails" />	
+		
+		<action name="RemoveHeadGirlRow" class="com.kovidRMS.action.VotingAction"
+			method="removeHeadGirlRow" />
+		
+		<action name="RemoveHeadBoyRow" class="com.kovidRMS.action.VotingAction"
+			method="removeHeadBoyRow" />
+			
+		<action name="RemoveRedCaptainRow" class="com.kovidRMS.action.VotingAction"
+			method="removeRedCaptainRow" />
+			
+		<action name="RemoveBlueCaptainRow" class="com.kovidRMS.action.VotingAction"
+			method="removeBlueCaptainRow" />
+			
+		<action name="RemoveGreenCaptainRow" class="com.kovidRMS.action.VotingAction"
+			method="removeGreenCaptainRow" />
+			
+		<action name="RemoveYellowCaptainRow" class="com.kovidRMS.action.VotingAction"
+			method="removeYellowCaptainRow" />	
+			
+		<action name="RenderVoting" class="com.kovidRMS.action.VotingAction"
+			method="renderVoting">
+			<result name="success">voting.jsp</result>
+			<result name="error">voting.jsp</result>
+		</action>	
+		
+		<action name="ConfigureRedHouseVoting" class="com.kovidRMS.action.VotingAction"
+			method="configureRedHouseVoting">
+			<result name="success">voting.jsp</result>
+			<result name="error">voting.jsp</result>
+		</action>	
+		
+		<action name="ConfigureBlueHouseVoting" class="com.kovidRMS.action.VotingAction"
+			method="configureBlueHouseVoting">
+			<result name="success">voting.jsp</result>
+			<result name="error">voting.jsp</result>
+		</action>
+		
+		<action name="ConfigureGreenHouseVoting" class="com.kovidRMS.action.VotingAction"
+			method="configureGreenHouseVoting">
+			<result name="success">voting.jsp</result>
+			<result name="error">voting.jsp</result>
+		</action>
+		
+		<action name="ConfigureYellowHouseVoting" class="com.kovidRMS.action.VotingAction"
+			method="configureYellowHouseVoting">
+			<result name="success">voting.jsp</result>
+			<result name="error">voting.jsp</result>
+		</action>	
+		
+		<action name="ConfigureVotingStatus" class="com.kovidRMS.action.VotingAction"
+			method="configureVotingStatus">
+			<result name="success">setElectionPage.jsp</result>
+			<result name="error">setElectionPage.jsp</result>
+		</action>	
+		
+		<action name="GenerateReport" class="com.kovidRMS.action.VotingAction"
+			method="generateReport">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=${fileName}</param>
+				<param name="contentType">application/octet-stream</param>
+				<param name="inputName">fileInputStream</param>
+				<param name="bufferSize">4096</param>
+			</result>
+			<result name="error">welcome.jsp</result>
+			<result name="input">welcome.jsp</result>
+		</action>
+				
+	</package>
+</struts>

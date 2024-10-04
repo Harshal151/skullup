@@ -1,0 +1,3 @@
+INDEX VERSION 1.134
+C:\Users\admin\KovidRMS\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2132771737.index
+\SkoolUp\src\main\java
